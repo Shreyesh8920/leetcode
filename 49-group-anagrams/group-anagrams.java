@@ -1,4 +1,8 @@
 class Solution {
+// Count the frequency of all 26 characters.
+// Convert the frequency array into a unique String key (e.g. "1#0#0#...").
+// All anagrams produce the same key, so they are stored in the same HashMap group.
+// This avoids comparing every string with every other string.
     public boolean isAnagram(String s1, String s2, int[] arr){
         if(s1.length()!=s2.length()) return false;
         boolean empty = true;
